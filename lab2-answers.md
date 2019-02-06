@@ -17,4 +17,4 @@ ticket(_t_id_, /_performance_id_/, /_username_/)
 customer(_username_, full_name, password, /_t_id_/)
 
 ## 7.
-One way is to add an attribute that counts the number of sold tickets to Performance. A
+One way is to GROUP BY p_id and SELECT count()
