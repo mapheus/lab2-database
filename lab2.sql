@@ -27,7 +27,7 @@ CREATE TABLE performances (
   theater_name		TEXT,
   imdb_key		TEXT,
   PRIMARY KEY (performance_id),
-  FOREIGN KEY (theater_name) REFERENCES theater(theater_name),
+  FOREIGN KEY (theater_name) REFERENCES theaters(theater_name),
   FOREIGN KEY (imdb_key) REFERENCES movies(imdb_key)
 );
 
@@ -46,8 +46,8 @@ CREATE TABLE tickets (
   performance_id	TEXT,
   username		TEXT,
   PRIMARY KEY (t_id),
-  FOREIGN KEY (performance_id) REFERENCES performance(performance_id),
-  FOREIGN KEY (username) REFERENCES customer(username)
+  FOREIGN KEY (performance_id) REFERENCES performances(performance_id),
+  FOREIGN KEY (username) REFERENCES customers(username)
 );
 
 
@@ -57,7 +57,7 @@ CREATE TABLE customers(
   password		TEXT,
   t_id			TEXT,
   PRIMARY KEY (username),
-  FOREIGN KEY (t_id) REFERENCES ticket(t_id)
+  FOREIGN KEY (t_id) REFERENCES tickets(t_id)
 );
 
 
