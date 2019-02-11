@@ -17,4 +17,6 @@ ticket(_t_id_, /_performance_id_/, /_username_/)
 customer(_username_, full_name, password, /_t_id_/)
 
 ## 7.
-Googla: sqlite count amount of foreign key
+If when the database is created, we create all the tickets with no user attached, one way to keep track of the number of free seats is to check if the ticket entity has a username attached to it.
+
+Another way is to add the entity "Sold_tickets" that has a relation to Ticket and Theater...
